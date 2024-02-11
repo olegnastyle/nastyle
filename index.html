@@ -5,127 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML + CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+            content-visibility: auto;
+        }
+        }
+    </style>
     <link rel="stylesheet" href="./style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <h1 class="reefefed">Блог</h1>
+<body class="container mx-auto bg-dark font-code">
+    <header class="flex justify-between items-center py-8">
+        <div> <!-- логотип -->
+            <a href="#" class="flex gap-2 text-slate-50">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.5H8V4.5H4H0V8.5V12.5V16.5H4H8V12.5H12H16V8.5V4.5V0.5H12ZM4 12.5H8V8.5H12V4.5H8V8.5H4V12.5Z" fill="white"/>
+                </svg>
+                <span>Elias</span>
+            </a>
+        </div>
+        <div class="flex gap-8">
+            <nav> <!-- навигация сайта -->
+                <ul class="flex gap-8 text-slate-50">
+                    <li><a class="before:content-['#'] before:ml-0.5 before:text-violet-500 brightness-75 hover:brightness-100" href="#">home</a></li>
+                    <li><a class="before:content-['#'] before:ml-0.5 before:text-violet-500 brightness-75 hover:brightness-100" href="#">work</a></li>
+                    <li><a class="before:content-['#'] before:ml-0.5 before:text-violet-500 brightness-75 hover:brightness-100" href="#">about-me</a></li>
+                    <li><a class="before:content-['#'] before:ml-0.5 before:text-violet-500 brightness-75 hover:brightness-100" href="#">contacts</a></li>
+                </ul>
+            </nav>
+            <div> <!-- светлая / темная тема -->
+                <button class="brightness-75 hover:brightness-100 active:brightness-75">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-violet-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>                      
+                </button>
+            </div>
+        </div>
     </header>
     <main>
-        <div class="posts">
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
+        <div class="flex justify-between items-center gap-5 mt-10"> <!-- первый экран -->
+            <div>
+                <h1 class="text-slate-50 text-3xl text-balance">Elias is a <strong class="text-violet-500">web designer</strong> and <strong class="text-violet-500">front-end developer</strong></h1>
+                <p class="mt-8 text-slate-50 brightness-75">He crafts responsive websites where technologies meet creativity</p>
+                <a class="inline-block py-2 px-4 border border-violet-500 hover:bg-violet-900 active:brightness-75 mt-6 text-slate-50 " href="#">Contact me</a>
             </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
-            </div>
-            <div class="post">
-                <h2>Под заголовок</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
-                <a href="#">Чтать подробнее</a>
+            <div>
+                <img src="./style/img/prew.png" alt="Фото разрабочтиков">
+                <p class="flex justify-center gap-2 border border-slate-50 py-2 text-slate-50">Currently working on <b>Portfolio</b></p>
             </div>
         </div>
     </main>
-    <footer>
-        <h4>Все права защищены © 2024</h4>
-    </footer>
-
-    
-    
 </body>
 
 </html>
