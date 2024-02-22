@@ -1,2 +1,5 @@
 .bg-dark {background-color: #282c33;}
 .font-code {font-family: 'Fira Code', monospace;}
+.quote {position: relative;}
+.quote::before{content: url(./style/img/quote.svg);position: absolute;top: -16px;}
+.quote::after{content: url(./style/img/quote.svg);position: absolute;bottom: -16px;right: 15px;}
